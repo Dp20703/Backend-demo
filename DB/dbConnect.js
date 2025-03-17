@@ -7,13 +7,12 @@ async function dbConnect() {
         // Connect to the MongoDB database: RentingProperties
         await client.connect();
         console.log("Connected with MongoDB atlas");
-        const database = client.db("RentingProperties");
+        const database = client.db("company");
         return database;
-
-
+        
     } catch (error) {
         console.log(error);
 
     }
 }
-module.exports=dbConnect;
+module.exports = dbConnect;
