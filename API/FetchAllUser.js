@@ -4,7 +4,7 @@ const connectDB = require("../DB/dbConnect");
 async function FetchAllUser(req, res) {
     try {
         const db = await connectDB();
-        const collection = db.collection("Login");
+        const collection = db.collection("Register");
 
         // Get the data from the collection:
 
