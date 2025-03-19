@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const { contactUs } = require('./API/ContactUs');
 const { register } = require('./API/Register');
+const { Login } = require('./API/Login');
+const { FetchAllUser } = require('./API/FetchAllUser');
 const app = express();
 
 dbConnect();
@@ -21,6 +23,9 @@ app.use(cors());
 //create routes 
 app.post('/contactUs', contactUs);
 app.post('/register', register);
+app.post("/login", Login);
+app.get('/fetchalluser', FetchAllUser)
+
 
 
 

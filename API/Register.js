@@ -4,7 +4,7 @@ const dbConnect = require('../DB/dbConnect');
 async function register(req, res) {
     try {
         const db = await dbConnect();
-        const collection = db.collection('register');
+        const collection = db.collection('Login');
         const { firstName, lastName, email, password } = req.body;
         await collection.insertOne({
             firstName,
