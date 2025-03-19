@@ -3,7 +3,7 @@ const connectDb = require("../DB/dbConnect");
 async function Login(req, res) {
     try {
         const db = await connectDb();
-        const collection = db.collection("Login");
+        const collection = db.collection("Register");
         const { email, password } = req.body;
 
         //query to check data from collection:
