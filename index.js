@@ -5,6 +5,7 @@ const { contactUs } = require('./API/ContactUs');
 const { register } = require('./API/Register');
 const { Login } = require('./API/Login');
 const { FetchAllUser } = require('./API/FetchAllUser');
+const { UpdateProfile } = require('./API/UpdateProfile');
 const app = express();
 
 dbConnect();
@@ -24,7 +25,8 @@ app.use(cors());
 app.post('/contactUs', contactUs);
 app.post('/register', register);
 app.post("/login", Login);
-app.get('/fetchalluser', FetchAllUser)
+app.get('/fetchalluser', FetchAllUser);
+app.post("/update_profile", UpdateProfile);
 
 
 
