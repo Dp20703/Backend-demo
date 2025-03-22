@@ -18,7 +18,7 @@ async function UpdateProfile(req, res) {
         }
         const result = await collection.updateOne({ _id: new ObjectId(id) }, updateData);
         if (result.modifiedCount == 0) {
-            return res.status(200).json({ message: "No data found" });
+            return res.status(400).json({ message: "No data found" });
         }
         else {
             return res.status(200).json({ message: "Profile Updated Successfully" });
