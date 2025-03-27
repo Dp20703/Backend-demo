@@ -28,6 +28,7 @@ app.post('/register', register);
 app.post("/login", Login);
 app.get('/fetchalluser', FetchAllUser);
 app.post("/update_profile", UpdateProfile);
+//delete user
 app.post('/delete_user',DeleteUser);
 
 
