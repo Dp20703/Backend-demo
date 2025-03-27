@@ -6,6 +6,7 @@ const { register } = require('./API/Register');
 const { Login } = require('./API/Login');
 const { FetchAllUser } = require('./API/FetchAllUser');
 const { UpdateProfile } = require('./API/UpdateProfile');
+const { DeleteUser } = require('./API/Deleteuser');
 const app = express();
 
 dbConnect();
@@ -27,6 +28,7 @@ app.post('/register', register);
 app.post("/login", Login);
 app.get('/fetchalluser', FetchAllUser);
 app.post("/update_profile", UpdateProfile);
+app.post('/delete_user',DeleteUser);
 
 
 
