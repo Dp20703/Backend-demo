@@ -1,6 +1,8 @@
 const multer = require('multer');
-//to store images in images folder
 
+
+
+//to store images in images folder
 const storage = multer.diskStorage(
     {
         destination: './images',
