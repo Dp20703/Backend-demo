@@ -5,12 +5,13 @@ async function register(req, res) {
     try {
         const db = await dbConnect();
         const collection = db.collection('Register');
-        const { firstName, lastName, email, password } = req.body;
+        const { name, phone, email, password, address } = req.body;
         await collection.insertOne({
-            firstName,
-            lastName,
+            name,
             email,
-            password
+            phone,
+            password,
+            address
         })
         return res.status(200).json({ message: "User registered successfully" })
 

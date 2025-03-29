@@ -19,7 +19,7 @@ dbConnect();
 // Server port
 const port = 4000;
 app.listen(port);
-console.log('Server is running on' + `http://localhost:${port}`);
+console.log('Server is running on ' + `http://localhost:${port}`);
 
 // Middleware
 app.use(express.json());
